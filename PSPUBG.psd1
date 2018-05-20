@@ -30,7 +30,7 @@ CompanyName = 'Syspeople'
 Copyright = '(c) 2018 Morten G. Johansen. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'Module to work with PUBG API'
+Description = 'Module to work with PUBG API. Get your free API key from https://developer.playbattlegrounds.com to be able to work with this module.'
 
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '3.0'
