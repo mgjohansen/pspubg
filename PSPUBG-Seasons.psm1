@@ -4,7 +4,7 @@
     You must have invoked Set-PUBGApiKey and SSet-PUBGRegion prior to executing this function
 .EXAMPLE
     Get-PUBGSeasons
-    Returns player all seasons of PUBG. The one with isCurrentSeason = true is the current one.
+    Returns all seasons of PUBG. The one with isCurrentSeason = true is the current one.
 #>
 function Get-PUBGSeasons {
     if ((Test-PUBGApiEnvironment) -eq $false) {
