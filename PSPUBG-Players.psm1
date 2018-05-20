@@ -1,18 +1,17 @@
 <#
 .SYNOPSIS
-    Returns clients from the connected Liquid Planner URL (optionally based on a name)
-.NOTES
-    You must have invoked Set-LiquidPlannerAuth or Set-LiquidPlannerAuthToken prior to executing this cmdlet
-.PARAMETER Name
-    Parameter to specify the name to search for. Operator is a contains condition. Optional Parameter.
-.PARAMETER Filter
-    Parameter to specify filter to use in the query. Optional Parameter.
+    Returns players from the connected PUBG Api environment
+    You must have invoked Set-PUBGApiKey and SSet-PUBGRegion prior to executing this function
+.PARAMETER PlayerNames
+    Parameter to specify the player name(s) to search for. Optional Parameter.
+.PARAMETER PlayerIDs
+    Parameter to specify the player id(s) to search for. Optional Parameter.
 .EXAMPLE
-    Get-LiquidPlannerClient -Name 'Client ABC'
-    Return clients that contains the name Client ABC
+    Get-PUBGPlayers -PlayerNames 'Sourc3Unk0wn'
+    Returns player with the name Sourc3Unk0wn
 .EXAMPLE
-    Get-LiquidPlannerClient -Filter '?filter[]=name%20contains%20Microsoft'
-    Return clients that contains the name Microsoft
+    Get-PUBGPlayers -PlayerIDs 'account.659400b28be4471e822e4729586eaa41'
+    Returns player with the account id 659400b28be4471e822e4729586eaa41
 #>
 function Get-PUBGPlayers {
     Param (
