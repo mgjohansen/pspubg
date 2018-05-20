@@ -10,9 +10,11 @@ Download the [latest release](https://github.com/mgjohansen/pspubg/releases/late
 Once you've done this, all the cmdlets will be at your disposal, you can see a full list using `Get-Command -Module PSPUBG`. Remember to run Set-PUBGApiKey & Set-PUBGRegion before beginning to work with the API.
 
 ## Cmdlets
-* cmdlet 1
-* cmdlet 2
-* cmdlet 3
+* Get-PUBGPlayers
+* Remove-PUBGApiEnvironment
+* Set-PUBGApiKey
+* Set-PUBGRegion
+* Test-PUBGApiEnvironment
 
 ## Author
 Author: Morten G. Johansen (<morten@glerupjohansen.dk>) // [Twitter](https://twitter.com/mgjohansen)
