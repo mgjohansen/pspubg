@@ -77,5 +77,3 @@ function Remove-PUBGApiEnvironment {
     }
     return $true;
 }
-
-# Export-ModuleMember -Function *-*
