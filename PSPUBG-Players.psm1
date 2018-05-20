@@ -13,7 +13,7 @@
     Get-PUBGPlayers -PlayerNames 'Priceless_dk,Sourc3Unk0wn'
     Returns multiple players
 .EXAMPLE
-    Get-PUBGPlayers -PlayerIDs '659400b28be4471e822e4729586eaa41'
+    Get-PUBGPlayers -PlayerIDs 'account.659400b28be4471e822e4729586eaa41'
     Returns player with the account id 659400b28be4471e822e4729586eaa41
 #>
 function Get-PUBGPlayers {
@@ -31,7 +31,7 @@ function Get-PUBGPlayers {
     if ($PlayerNames) {
         $RestURL = $RestURL + '/players?filter[playerNames]=' + $PlayerNames
     } elseif ($PlayerIDs) {
-        $RestURL = $RestURL + '/players?filter[playerIds]=account.' + $PlayerIDs
+        $RestURL = $RestURL + '/players?filter[playerIds]=' + $PlayerIDs
     }
     $Result = Invoke-RestMethod -Method Get -Uri $RestURL -ContentType "application/json" -Headers $Global:PUBGApiHeader
     if ($Result -ne $null) {
