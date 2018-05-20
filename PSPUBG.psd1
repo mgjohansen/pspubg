@@ -33,7 +33,7 @@ Copyright = '(c) 2018 Morten G. Johansen. All rights reserved.'
 Description = 'Module to work with PUBG API'
 
 # Minimum version of the Windows PowerShell engine required by this module
-# PowerShellVersion = ''
+PowerShellVersion = '3.0'
 
 # Name of the Windows PowerShell host required by this module
 # PowerShellHostName = ''
