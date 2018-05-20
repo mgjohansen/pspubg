@@ -98,7 +98,7 @@ PrivateData = @{
     PSData = @{
 
         # Tags applied to this module. These help with module discovery in online galleries.
-        Tags = @('PUBG','Player Unknowns Battleground','Games','API')
+        Tags = @('PUBG','Module','Games','API')
 
         # A URL to the license for this module.
         LicenseUri = 'https://github.com/mgjohansen/pspubg/blob/master/LICENSE'
