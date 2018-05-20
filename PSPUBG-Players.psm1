@@ -27,7 +27,7 @@ function Get-PUBGPlayers {
         'Please make sure the environment variables is set with Set-PUBGApiKey & Set-PUBGRegion before runnning this function'
         break
     }
-    if (($PlayerNames -and $PlayerIDs -eq $false)) {
+    if ($PlayerNames -and $PlayerIDs -eq $false) {
         'You need to either input PlayerNames or PlayerIDs for this to work'
     }
     $RestURL = $Global:PUBGRestUrl + $Global:PUBGRegion
