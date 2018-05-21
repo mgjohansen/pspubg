@@ -11,7 +11,7 @@ function Get-PUBGSeasons {
         'Please make sure the environment variables is set with Set-PUBGApiKey & Set-PUBGRegion before runnning this function'
         break
     }
-    $RestURL = $Global:PUBGRestUrl + $Global:PUBGRegion + '/seasons/'
+    $RestURL = $Global:PUBGRestUrl + $Global:PUBGRegion + '/seasons'
     $Result = Invoke-RestMethod -Method Get -Uri $RestURL -ContentType "application/json" -Headers $Global:PUBGApiHeader
     if ($Result -ne $null) {
         return $Result
