@@ -34,8 +34,25 @@ function Set-PUBGApiKey {
 function Set-PUBGRegion {
     param(
         [parameter(mandatory=$true)]
+        [ValidateSet('xbox-as','xbox-eu','xbox-na','xbox-oc','pc-krjp','pc-jp','pc-na','pc-eu','pc-ru','pc-oc','pc-kakao','pc-sea','pc-sa','pc-as')]
         [string]$Region
     )
+    switch ($Region) {
+        'xbox-as' { $Region = 'xbox-as' }
+        'xbox-eu' { $Region = 'xbox-eu' }
+        'xbox-na' { $Region = 'xbox-na' }
+        'xbox-oc' { $Region = 'xbox-oc' }
+        'pc-krjp' { $Region = 'pc-krjp' }
+        'pc-jp' { $Region = 'pc-jp' }
+        'pc-na' { $Region = 'pc-na' }
+        'pc-eu' { $Region = 'pc-eu' }
+        'pc-ru' { $Region = 'pc-ru' }
+        'pc-oc' { $Region = 'pc-oc' }
+        'pc-kakao' { $Region = 'pc-kakao' }
+        'pc-sea' { $Region = 'pc-sea' }
+        'pc-sa' { $Region = 'pc-sa' }
+        'pc-as' { $Region = 'pc-as' }
+    }
     $Global:PUBGRegion = $Region
     return $true;
 }
