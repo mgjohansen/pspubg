@@ -18,6 +18,7 @@ function Get-PUBGSeasons {
     if ($Current) {
         $RestURL = $Global:PUBGRestUrl + $Global:PUBGRegion + '/seasons'
         $Result = Invoke-RestMethod -Method Get -Uri $RestURL -ContentType "application/json" -Headers $Global:PUBGApiHeader | Where-Object {(($_.data).attributes).isCurrentSeason -eq 'true'}
+        $Result = $Result | Select-Object -ExpandProperty 'data' | Where-Object {($_.attributes).isCurrentSeason -eq 'true'}
     } else {
         $RestURL = $Global:PUBGRestUrl + $Global:PUBGRegion + '/seasons'
         $Result = Invoke-RestMethod -Method Get -Uri $RestURL -ContentType "application/json" -Headers $Global:PUBGApiHeader
