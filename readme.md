@@ -10,7 +10,9 @@ You can install the module from PS Gallery (early release right now) `Find-Modul
 Once you've done this, all the cmdlets will be at your disposal, you can see a full list using `Get-Command -Module PSPUBG`. Remember to run Set-PUBGApiKey & Set-PUBGRegion before beginning to work with the API.
 
 ## Cmdlets
+* Get-PUBGMatch
 * Get-PUBGPlayers
+* Get-PUBGSeasons
 * Remove-PUBGApiEnvironment
 * Set-PUBGApiKey
 * Set-PUBGRegion
