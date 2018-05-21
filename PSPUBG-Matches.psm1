@@ -1,7 +1,7 @@
 <#
 .SYNOPSIS
     Returns match from the connected PUBG Api environment
-    You must have invoked Set-PUBGApiKey and SSet-PUBGRegion prior to executing this function
+    You must have invoked Set-PUBGApiKey and Set-PUBGRegion prior to executing this function
 .PARAMETER MatchID
     Parameter to specify the match id to search for. Mandatory Parameter.
 .EXAMPLE
