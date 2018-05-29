@@ -1,7 +1,7 @@
 <#
 .SYNOPSIS
     Returns seasons from the connected PUBG Api environment
-    You must have invoked Set-PUBGApiKey and SSet-PUBGRegion prior to executing this function
+    You must have invoked Set-PUBGApiKey and Set-PUBGRegion prior to executing this function
 .EXAMPLE
     Get-PUBGSeasons
     Returns all seasons of PUBG. The one with isCurrentSeason = true is the current one.
