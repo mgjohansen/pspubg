@@ -37,23 +37,31 @@ function Get-PUBGSeasons {
 .EXAMPLE
     Get-PUBGSeasonStats -PlayerId '659400b28be4471e822e4729586eaa41' -SeasonId 'division.bro.official.2018-05'
     Returns season information for player id 659400b28be4471e822e4729586eaa41 and the season division.bro.official.2018-05.
+.EXAMPLE
+    Get-PUBGSeasonStats -PlayerId '659400b28be4471e822e4729586eaa41' -SeasonId 'division.bro.official.2018-05' -Expand
+    Returns season information for player id 659400b28be4471e822e4729586eaa41 and the season division.bro.official.2018-05. Will expand the returned information down to all game modes.
 #>
 function Get-PUBGSeasonStats {
     param(
         [parameter(mandatory=$true)]
         [string]$PlayerId,
         [parameter(mandatory=$true)]
-        [string]$SeasonId
+        [string]$SeasonId,
+        [parameter(mandatory=$false)]
+        [switch]$Expand
     )
     if ((Test-PUBGApiEnvironment) -eq $false) {
         'Please make sure the environment variables is set with Set-PUBGApiKey & Set-PUBGRegion before runnning this function'
         break
     }
-    if ($PlayerId -or $SeasonId -eq $false) {
+    if ($PlayerId -and $SeasonId -eq $false) {
         'You need to input PlayerId and SeasonId for this to work'
     }
         $RestURL = $Global:PUBGRestUrl + $Global:PUBGRegion + '/players/' + $PlayerId + '/seasons/' + $SeasonId
         $Result = Invoke-RestMethod -Method Get -Uri $RestURL -ContentType "application/json" -Headers $Global:PUBGApiHeader
+    if ($Expand) {
+        $Result = ((($Result).data).attributes).gameModeStats | Format-List *
+    }
     if ($Result -ne $null) {
         return $Result
     } else {
