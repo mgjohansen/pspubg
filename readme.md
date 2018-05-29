@@ -13,6 +13,7 @@ Once you've done this, all the cmdlets will be at your disposal, you can see a f
 * Get-PUBGMatch
 * Get-PUBGPlayers
 * Get-PUBGSeasons
+* Get-PUBGSeasonStats
 * Remove-PUBGApiEnvironment
 * Set-PUBGApiKey
 * Set-PUBGRegion
