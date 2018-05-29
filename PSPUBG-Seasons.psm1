@@ -60,7 +60,7 @@ function Get-PUBGSeasonStats {
         $RestURL = $Global:PUBGRestUrl + $Global:PUBGRegion + '/players/' + $PlayerId + '/seasons/' + $SeasonId
         $Result = Invoke-RestMethod -Method Get -Uri $RestURL -ContentType "application/json" -Headers $Global:PUBGApiHeader
     if ($Expand) {
-        $Result = ((($Result).data).attributes).gameModeStats | Format-List *
+        $Result = ((($Result).data).attributes).gameModeStats
     }
     if ($Result -ne $null) {
         return $Result
