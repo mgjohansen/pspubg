@@ -1,7 +1,7 @@
 <#
 .SYNOPSIS
     Returns players from the connected PUBG Api environment
-    You must have invoked Set-PUBGApiKey and SSet-PUBGRegion prior to executing this function
+    You must have invoked Set-PUBGApiKey and Set-PUBGRegion prior to executing this function
 .PARAMETER PlayerNames
     Parameter to specify the player name(s) to search for. Optional Parameter.
 .PARAMETER PlayerIDs
