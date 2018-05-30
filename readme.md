@@ -5,7 +5,7 @@ This PowerShell module provides a series of cmdlets for interacting with the [PU
 Requires PowerShell 3.0 or above (this is when `Invoke-RestMethod` was introduced).
 
 ## Usage
-You can install the module from PS Gallery (early release right now) `Find-Module pspubg | Install-Module` and then run:
+You can install the module from [PowerShell Gallery](https://www.powershellgallery.com/packages/pspubg/) `Find-Module pspubg | Install-Module` and then run:
 `Import-Module PSPUBG`
 Once you've done this, all the cmdlets will be at your disposal, you can see a full list using `Get-Command -Module PSPUBG`. Remember to run Set-PUBGApiKey & Set-PUBGRegion before beginning to work with the API.
 
